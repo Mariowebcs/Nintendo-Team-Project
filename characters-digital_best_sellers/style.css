@@ -1,0 +1,229 @@
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(72, 72, 72);
+}
+
+.gridCharacters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 7%;
+    gap: 2%;
+}
+
+.Characters {
+    padding-left: 7%;
+}
+
+.Charactersstyles {
+    position: relative;
+    padding: 0;
+    grid-template-rows: 1fr 1fr;
+}
+
+.background {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.over {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.BestSellerDigitali {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10%;
+}
+
+.linea {
+    color: rgb(202, 202, 202);
+}
+
+.full_list {
+    color: #E60012;
+    text-decoration: underline;
+}
+
+.full_list:hover {
+    color: #ac000d;
+}
+
+.section_Best_seller {
+    display: flex;
+    gap: 10px;
+    padding-left: 10%;
+}
+
+.image {
+    width: 300px;
+    height: 169px;
+    box-sizing: border-box;
+}
+
+.card:hover .image {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .card:hover .nameCard {
+    color: #E60012;
+  }
+
+.nameCard {
+    color: rgb(72, 72, 72);
+}
+
+a {
+    text-decoration: none;
+}
+
+ .totCard {
+   overflow: scroll;
+ }
+
+.card {
+    border: 1px solid rgb(202, 202, 202);
+    width: 300px;
+    height: 350px;
+}
+
+.nuovo {
+
+    border-radius: 5px;
+    background-color: #E60012;
+    color: white;
+    width: 20%;
+}
+
+.costo {
+    color: rgb(72, 72, 72);
+}
+
+.left,
+.right {
+    background-color: transparent;
+    opacity: 20%;
+}
+
+.left:hover,
+.right:hover {
+    background-color: rgb(72, 72, 72);
+    opacity: 100%;
+}
+
+.fineCard {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    padding-left: 4%;
+}
+
+.fineCard1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+}
+
+.endCard {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    padding-left: 4%;
+}
+
+.end {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0% 75% 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+}
+
+.barra {
+    color: #E60012;
+    font-size: 25px;
+}
+
+.Nintendo {
+    color: rgb(72, 72, 72);
+}
+
+.Buttonstyles {
+    width: 70px;
+}
+
+.See_full_list2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    background-color: #E60012;
+    border-radius: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.See_full_list2:hover {
+    background-color: #ac000d;
+    color: white;
+}
+
+.Buttonstyles__Span {
+    text-decoration: none;
+    color: white;
+    width: 70px;
+}
+
+.heart {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+}
+
+.svg{
+    width: 40px;
+    height: 40px;
+}
+
+.heart-filled {
+   background-color: #E60012;
+}
+
+.heart-outline {
+    background: none;
+    overflow: hidden;
+    line-height: 1;
+    background-color: #E60012;
+    color: rgb(230, 0, 18);
+}
+
+.sparks{
+color: #E60012;
+display: none;
+}
+
+.heart:hover .sparks {
+    color: #ac000d;
+    display: contents;
+  }
+
+.svg {
+    color: rgb(230, 0, 18);
+}
