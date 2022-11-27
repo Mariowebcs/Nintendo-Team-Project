@@ -57,7 +57,7 @@ nav {
             padding: 0 1em;
             span {
                 font-size: 12px;
-                border: 2px solid white;
+                border: 3px solid white;
                 border-radius: 2em;
                 padding: 0 0.7em;
                 margin: 0 0.5em;
@@ -188,17 +188,43 @@ hr {
         }
     }
     .list_nav,
-    #nav_top_left > div:last-of-type,
-    #container_bg {
+    #nav_top_left > div:last-of-type {
         display: none;
+        }
+    #nav_top {
+        height: 45px;
     }
     #wrapper {
-        top: 0px;
+        top: 45px;
+        height: 64em;
+    }
+    #container_bg {
+        height: 64em;
     }
     #container_image{
+        top:0;
         img {
             width: 100%;
             height: 100%;
         }
+    }
+    #outro {
+        position: relative;
+        top: -3em;
+        text-align: center;
+        flex-direction: column;
+        padding: 0 1.5em;
+        div {
+            display: block;
+            width: 100%;
+            margin-top: 1em;
+            div {
+            width: 100%;
+            }
+        }
+    }
+    hr {
+        position: relative;
+        width: 95%;
     }
 }
