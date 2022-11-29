@@ -22,4 +22,13 @@
 }
 
 
-   
+a .link:hover {
+    .over:hover {
+        transform: scale(1.15);
+    }
+
+    .firstImage:hover {
+        transform: scale(1.15);
+    } 
+    
+}

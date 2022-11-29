@@ -20,4 +20,11 @@
   height: 350px;
 }
 
+a .link:hover .over:hover {
+  transform: scale(1.15);
+}
+a .link:hover .firstImage:hover {
+  transform: scale(1.15);
+}
+
 /*# sourceMappingURL=style2.css.map */
