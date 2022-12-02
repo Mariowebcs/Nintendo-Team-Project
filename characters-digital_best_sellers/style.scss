@@ -15,33 +15,83 @@ h1:first-child {
 }
 
 .gridCharacters {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 7%;
+    display: flex;
+    padding-left: 5rem;
     gap: 2%;
+   
+}
+.Charactersstyles {
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.Charactersstyles {
+.nameImage {
+    color: rgb(72, 72, 72);
+    margin: 0px;
+}
+// .Charactersstyles {
+//     // position: relative;
+//     // padding: 0;
+//     // grid-template-rows: 1fr 1fr;
+//     display: block;
+//     position: relative;
+//     z-index: 1;
+//     width: 100%;
+//     height: auto;
+//     text-align: center;
+//     overflow: hidden;
+//     border-radius: 0.25rem;
+//     margin-bottom: 0.5rem;
+
+// }
+.link {
+    display: block;
     position: relative;
-    padding: 0;
-    grid-template-rows: 1fr 1fr;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.secondImage {
+    height: 100%;  
 }
 
 .background {
-    border-width: 0;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transition: transform 200ms ease-in-out 0s;
+    
 }
 
 .over {
-    border-width: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: transform 200ms ease-in-out 0s;
+    background: none;
+   
+}
+
+   
+.Charactersstyles:hover {
+    .background {
+    transform: scale(1);
+    }
+    .over:hover {
+    transform: scale(1.15);
+}
 }
 
 // schede
@@ -51,13 +101,13 @@ a {
 
 .totCard {
     overflow: scroll;
+    height: 85%;
 }
 
 .BestSellerDigitali {
     display: flex;
     align-items: center;
     gap: 20px;
-    
     padding-left: 10%;
    
 }
@@ -67,7 +117,7 @@ a {
     align-items: center;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    width: 20px;
+    width: 20%;
 }
 
 .linea {
@@ -78,11 +128,13 @@ a {
 .full_list {
     color: $light-red;
     text-decoration: underline;
-}
 
-.full_list:hover {
+    &:hover {
     color: $dark-red;
 } 
+}
+
+
 
 .section_Best_seller {
     display: flex;
@@ -118,22 +170,10 @@ a {
     opacity: 100%;
 } 
 
-
-.link:hover {
-    .over:hover {
-        transform: scale(1.15);
-    }
-
-    .background:hover {
-        transform: scale(1.15);
-    } 
-    
-}
-
 .card {
     border: 1px solid rgb(202, 202, 202);
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
 }
 
 .image {
@@ -205,9 +245,6 @@ a {
 
 // bottoe full list fine card 
 
-.Buttonstyles {
-    width: 70px;
-}
 
 .See_full_list2 {
     display: flex;
@@ -220,17 +257,23 @@ a {
     padding-right: 5%;
     margin-left: 2%;
     margin-right: 2%;
+
+    &:hover {
+        background-color: $dark-red;
+        color: white;
+        transform: scale(1.10);
+    }
 }
 
-.See_full_list2:hover {
-    background-color: $dark-red;
-    color: white;
+.Buttonstyles {
+    width: 100%;
 }
+
 
 .Buttonstyles__Span {
     text-decoration: none;
     color: white;
-    width: 70px;
+    width: 100%;
 }
 
 // bottone like
@@ -245,7 +288,21 @@ a {
 .svg{
     width: 40px;
     height: 40px;
+    fill: white;
+	fill-opacity: 1;
+	stroke: $light-red;
+	stroke-width: 4;
+	stroke-opacity: 1;
+
+    &:hover {
+        fill: white;
+        fill-opacity: 1;
+        stroke: $dark-red;
+        stroke-width: 4;
+        stroke-opacity: 1;
+    }
 }
+
 
 .heart-filled {
    background-color: red;
@@ -267,11 +324,16 @@ a {
 }
 
 .sparks{
-    color: $light-red;
+    
     display: none;
 }
 
-.heart:hover .sparks {
+.heart:hover  {
+    
+    .sparks{
     color: $dark-red;
     display: contents;
+    transition-property: display;
+    transition-duration: 10s;
+    }
 }

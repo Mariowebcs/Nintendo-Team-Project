@@ -13,33 +13,63 @@ h1:first-child {
 }
 
 .gridCharacters {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-left: 7%;
+  display: flex;
+  padding-left: 5rem;
   gap: 2%;
 }
 
 .Charactersstyles {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameImage {
+  color: rgb(72, 72, 72);
+  margin: 0px;
+}
+
+.link {
+  display: block;
   position: relative;
-  padding: 0;
-  grid-template-rows: 1fr 1fr;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.secondImage {
+  height: 100%;
 }
 
 .background {
-  border-width: 0;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15);
+  transition: transform 200ms ease-in-out 0s;
 }
 
 .over {
-  border-width: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: transform 200ms ease-in-out 0s;
+  background: none;
+}
+
+.Charactersstyles:hover .background {
+  transform: scale(1);
+}
+.Charactersstyles:hover .over:hover {
+  transform: scale(1.15);
 }
 
 a {
@@ -48,6 +78,7 @@ a {
 
 .totCard {
   overflow: scroll;
+  height: 85%;
 }
 
 .BestSellerDigitali {
@@ -62,7 +93,7 @@ a {
   align-items: center;
   margin: 0px 0px 0px 0px;
   padding: 0px;
-  width: 20px;
+  width: 20%;
 }
 
 .linea {
@@ -74,7 +105,6 @@ a {
   color: #E60012;
   text-decoration: underline;
 }
-
 .full_list:hover {
   color: #ac000d;
 }
@@ -113,17 +143,10 @@ a {
   opacity: 100%;
 }
 
-.link:hover .over:hover {
-  transform: scale(1.15);
-}
-.link:hover .background:hover {
-  transform: scale(1.15);
-}
-
 .card {
   border: 1px solid rgb(202, 202, 202);
-  width: 300px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
 }
 
 .image {
@@ -193,10 +216,6 @@ a {
   color: rgb(72, 72, 72);
 }
 
-.Buttonstyles {
-  width: 70px;
-}
-
 .See_full_list2 {
   display: flex;
   align-items: center;
@@ -209,16 +228,20 @@ a {
   margin-left: 2%;
   margin-right: 2%;
 }
-
 .See_full_list2:hover {
   background-color: #ac000d;
   color: white;
+  transform: scale(1.1);
+}
+
+.Buttonstyles {
+  width: 100%;
 }
 
 .Buttonstyles__Span {
   text-decoration: none;
   color: white;
-  width: 70px;
+  width: 100%;
 }
 
 .heart {
@@ -231,6 +254,18 @@ a {
 .svg {
   width: 40px;
   height: 40px;
+  fill: white;
+  fill-opacity: 1;
+  stroke: #E60012;
+  stroke-width: 4;
+  stroke-opacity: 1;
+}
+.svg:hover {
+  fill: white;
+  fill-opacity: 1;
+  stroke: #ac000d;
+  stroke-width: 4;
+  stroke-opacity: 1;
 }
 
 .heart-filled {
@@ -252,13 +287,14 @@ a {
 }
 
 .sparks {
-  color: #E60012;
   display: none;
 }
 
 .heart:hover .sparks {
   color: #ac000d;
   display: contents;
+  transition-property: display;
+  transition-duration: 10s;
 }
 
 /*# sourceMappingURL=style2.css.map */
