@@ -11,7 +11,10 @@ $effect_red: #AC000D;
     color: $text_color;
 }
 
-a, .fa-solid, #dropdown, #search, #search_area {
+a, 
+.fa-solid, 
+#dropdown, 
+#search {
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s;
@@ -33,16 +36,15 @@ nav {
     z-index: 2;
 }
 
-#nav_top {
+.nav_top {
     height: 52px;
     display: flex;
     justify-content: space-between;
 }
 
-#nav_top_left {
+.left {
     display: flex;
     gap: 1em;
-    width: 50%;
     div:first-of-type {
         display: flex;
         justify-content: center;
@@ -50,10 +52,10 @@ nav {
         background-color: $basis_red;
         a {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
+            // justify-content: center;
+            // align-items: center;
+            // width: 100%;
+            // height: 100%;
             padding: 0 1em;
             span {
                 font-size: 12px;
@@ -69,25 +71,22 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        height: max-content;
-        // border-bottom: 1px solid grey;
+        border-bottom: 1px solid grey;
         margin-top: auto;
         margin-bottom: auto;
-        #search,
         select {
             height: 2em;
             background-color: white;
             border: none;
         }
     }
-}
-
-#search_area:hover {
-    border-bottom: 1px solid $basis_red;
+    div:last-of-type:hover {
+        border-bottom: 1px solid $basis_red;
+    }
 }
 
 #search {
+    @extend select;
     width: 450px;
 }
  
@@ -110,13 +109,12 @@ nav {
 .bottom {
     height: 44px;
     border-top: 1px solid #dfdfdf;
-    width: 100%;
     justify-content: center;
 }
 
 #wrapper {
     width: 100%;
-    height: 39em;
+    height: 50em;
     position: relative;
     top: 96px;
 }
@@ -147,29 +145,51 @@ nav {
     align-items: center;
     margin: auto;
     padding: 3em;
-    div {
+    position: absolute;
+    top: 34em;
+    width: 100%;
+    div:first-child {
         display: flex;
         align-items: center;
-        gap: 2em;
+        gap: 1em;
         h2 {
             font-size: 30px;
+        }
+        div {
+            margin-left: 1em;
         }
     }
     a {
         display: block;        
         width: 100%;
-        color: white;
-        font-size: 20px;
         background-color: $basis_red;
         padding: 0.5em 1em;
         border-radius: 0.3em;
         border: none;
+        span {
+            color: white;
+            font-size: 20px;
+        }
     }
-    a:hover {
-        padding: 1em;
-        background-color: $effect_red;
-    }
+    // a:hover {
+    //     padding: 1em;
+    //     background-color: $effect_red;
+    // }
 }  
+
+@keyframes btn {
+    from {background-color: $basis_red; padding: inherit;}
+    to {background-color: $effect_red; padding: 1em;}
+}
+
+.btn-effect:hover {
+    animation-name: btn;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    // transform: scale(1.1);
+    // background-color: $effect_red;
+    // transition: all 300ms ease-out 25ms;
+}
 
 hr {
     width: 80%;
@@ -178,46 +198,46 @@ hr {
 }
 
 @media screen and (max-width: 1025px) {
-    #nav_top_left,
-    #nav_top_left > div:first-of-type {
+    .nav_top,
+    .left,
+    .left > div:first-of-type {
         width: 100%;
-    }
-    #nav_top_left > div:first-of-type {
-        a {
-            justify-content: flex-start;
-        }
+        justify-content: flex-start; 
     }
     .list_nav,
-    #nav_top_left > div:last-of-type {
+    .nav_top > div:last-of-type {
         display: none;
         }
-    #nav_top {
+    .nav_top {
         height: 45px;
     }
     #wrapper {
         top: 45px;
         height: 64em;
+        position: relative;
     }
     #container_bg {
         height: 64em;
     }
     #container_image{
-        top:0;
+        width: 100%;
+        top: 0;
+        position: absolute;
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     }
     #outro {
-        position: relative;
-        top: -3em;
+        position: absolute;
         text-align: center;
         flex-direction: column;
         padding: 0 1.5em;
+        top: 58.5em;
         div {
-            display: block;
             width: 100%;
-            margin-top: 1em;
+            margin-top: 0.5em;
+            flex-direction: column;
             div {
             width: 100%;
             }
@@ -226,5 +246,6 @@ hr {
     hr {
         position: relative;
         width: 95%;
+        top: 12em;
     }
 }
