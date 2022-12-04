@@ -1,0 +1,160 @@
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  color: rgb(72, 72, 72);
+}
+
+a:visited {
+  color: inherit;
+}
+
+section {
+  display: block;
+}
+
+div {
+  display: block;
+}
+
+section.initial-footer {
+  background-color: #E60012;
+  color: rgb(255, 255, 255);
+  padding: 2.25rem 1rem;
+}
+
+div.red-banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.red-banner a:hover {
+  color: inherit;
+}
+
+#ninlogo {
+  width: 240px;
+  height: 75px;
+}
+
+div.social {
+  display: grid;
+  justify-items: center;
+  width: 73%;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 32px;
+  padding-top: 10px;
+}
+
+section.middle-footer {
+  padding: 2rem 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+div.middle-container {
+  max-width: 90rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.grid-middle {
+  display: grid;
+  margin: 1rem auto;
+  justify-content: center;
+  grid-template-columns: 15.625rem;
+  row-gap: 2rem;
+}
+div.grid-middle div {
+  border-left: solid 1px rgb(218, 218, 218);
+  padding-left: 1.5rem;
+  font-weight: bold;
+}
+div.grid-middle div > a {
+  color: rgb(36, 36, 36);
+  text-decoration: none;
+}
+div.grid-middle div > a:hover {
+  border-bottom: solid 2px rgb(36, 36, 36);
+  transition: 200ms;
+}
+div.grid-middle ul {
+  font-size: 0.875rem;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+div.grid-middle ul li {
+  margin-top: 0.5rem;
+}
+div.grid-middle ul li a {
+  margin: 0em 0em 1em;
+  color: #E60012;
+  text-decoration: none;
+}
+div.grid-middle ul li a:hover {
+  color: #AC000D;
+  border-bottom: solid 2px #AC000D;
+  transition: 200ms;
+}
+
+div.privacylogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+section.end-footer {
+  background-color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem 1rem 114px;
+}
+
+div.end-container {
+  max-width: 90rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.grid-end {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.625rem;
+}
+
+div.flexbox-end {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+div.flexbox-end a {
+  text-decoration: none;
+}
+div.flexbox-end a:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: solid 2px rgb(255, 255, 255);
+  transition: 200ms;
+}
+
+svg {
+  width: 44px;
+  height: 36px;
+}
+
+span.change-region {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.change-region-text {
+  padding-left: 5px;
+}
+
+/*# sourceMappingURL=stylee.css.map */
