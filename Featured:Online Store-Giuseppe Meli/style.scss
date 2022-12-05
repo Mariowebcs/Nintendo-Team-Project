@@ -1,0 +1,141 @@
+@use 'variables.scss' as c;
+@use 'functions.scss' as f;
+
+
+*{
+    box-sizing: border-box;
+}
+  
+  
+  
+  
+  
+  
+.featured{
+   
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: f.converter(50); 
+    margin-left: f.converter(2) ;
+  
+    .card-container::-webkit-scrollbar{
+        display: none;
+     
+  }
+    
+   
+  .card-img-img>img{
+    width: f.converter(230);
+  }
+    
+    
+    
+  .link-card{
+        padding-left: f.converter(10);
+        padding-bottom: f.converter(15);    
+  }
+  
+  
+  
+  
+  a{
+    text-decoration: none;
+  }
+  
+   
+  .link-card-demo{
+        padding-left: f.converter(10);
+        padding-bottom: f.converter(33);
+  }
+  
+  
+    
+    
+  .card-container{
+        display: flex;
+       overflow-x: auto;
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+       
+  }
+    
+    
+  .card{
+        border: f.converter(1) ridge c.$border-color;
+        border-radius: f.converter(2);
+       
+  }
+    
+    
+    
+    
+  h3{
+        color: c.$color;
+        font-size: f.converter(15);
+  }
+    
+    
+    
+    
+  .border-left{
+        border-left: f.converter(3) solid c.$primary-color;
+        padding-left: f.converter(3);
+        margin-left:  f.converter(10);
+        color: c.$color;
+        font-size: f.converter(13);
+        
+  }
+    
+   
+  .card-footer{
+        padding-top: f.converter(3);
+        padding-bottom: f.converter(10);
+  }
+  
+
+}
+
+
+
+
+  
+    
+  
+    
+  
+  
+  .online-store{
+        padding-left: f.converter(4);
+        padding-right: f.converter(4);
+        padding-bottom: f.converter(15);
+        display: flex;    
+  
+        .img-online>img{
+            width: f.converter(460);
+      } 
+       
+      .online-paragraph{
+            font-size: f.converter(20);
+      }
+      
+       
+      .button-onlinestore{
+            color: c.$secondary-color;
+            background-color: c.$primary-color;
+            margin-left: f.converter(5);
+            padding: f.converter(7) f.converter(180) f.converter(7) f.converter(180);
+            text-decoration: none;
+            border-radius: f.converter(2);
+            width: f.converter(200);
+            
+      
+      }
+  
+    }
+
+
+
+    
+  
