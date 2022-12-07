@@ -1,7 +1,5 @@
 html,
 body {
-  height: 100vh;
-  width: 100vw;
   font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   line-height: 1.4;
@@ -14,8 +12,10 @@ h1:first-child {
 
 .gridCharacters {
   display: flex;
-  padding-left: 5rem;
+  padding-left: 5%;
+  padding-right: 5%;
   gap: 2%;
+  padding-bottom: 5%;
 }
 
 .Charactersstyles {
@@ -72,41 +72,56 @@ h1:first-child {
   transform: scale(1.15);
 }
 
+.hr {
+  border-top: 1px solid rgb(72, 72, 72);
+}
+
 a {
   text-decoration: none;
 }
 
 .totCard {
   overflow: scroll;
-  height: 85%;
+  padding-top: 5%;
 }
 
 .BestSellerDigitali {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding-left: 10%;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: start;
+  margin: 0px;
+  padding: 0px;
 }
 
 .title_Best_seller {
-  display: flex;
-  align-items: center;
-  margin: 0px 0px 0px 0px;
-  padding: 0px;
-  width: 20%;
-}
-
-.linea {
-  color: rgb(202, 202, 202);
-  font-size: 35px;
+  border-right: 1px solid rgb(182, 182, 182);
+  width: 30%;
+  font-size: 28px;
+  color: rgb(72, 72, 72);
 }
 
 .full_list {
   color: #E60012;
   text-decoration: underline;
+  font-weight: bold;
 }
 .full_list:hover {
   color: #ac000d;
+}
+
+.space {
+  display: block;
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  min-height: 1rem;
 }
 
 .section_Best_seller {
@@ -200,20 +215,25 @@ a {
 }
 
 .end {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 0% 75% 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 5px;
 }
-
-.barra {
-  color: #E60012;
-  font-size: 25px;
+.end .containerHeart {
+  display: flex;
+  justify-content: end;
+  padding-right: 2%;
+}
+.end .barraNintendo {
+  display: flex;
+  align-items: center;
 }
 
 .Nintendo {
   color: rgb(72, 72, 72);
+  padding-left: 0.5rem;
+  border-left: 2px solid #E60012;
+  margin: 0px;
 }
 
 .See_full_list2 {
@@ -249,6 +269,7 @@ a {
   height: 40px;
   background-color: white;
   border: none;
+  align-items: center;
 }
 
 .svg {
